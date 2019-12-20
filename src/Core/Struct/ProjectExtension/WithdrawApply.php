@@ -33,7 +33,7 @@ class WithdrawApply
      *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("fee_detail")
-     * @JMS\Type("array<string,string>")
+     * @JMS\Type("array")
      */
     protected $fee_detail;
     /**
