@@ -32,5 +32,8 @@ class ServiceProvider implements ServiceProviderInterface
         $app['order_withdrawApply'] = function ($app) {
             return new WithdrawApplyClient($app);
         };
+        $app['order_consumeApply'] = function ($app) {
+            return new ConsumeApplyClient($app);
+        };
     }
 }

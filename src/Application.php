@@ -21,6 +21,7 @@ use Zeevin\Libaip\Core\ServiceContainer;
  * @property \Zeevin\Libaip\Order\PayFrontSmsClient $order_payFrontSms
  * @property \Zeevin\Libaip\Order\QueryBalanceClient $order_queryBalance
  * @property \Zeevin\Libaip\Order\WithdrawApplyClient $order_withdrawApply
+ * @property \Zeevin\Libaip\Order\ConsumeApplyClient $order_consumeApply
  *
  * @package Zeevin\Libaip
  */

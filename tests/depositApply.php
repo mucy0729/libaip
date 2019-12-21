@@ -16,6 +16,7 @@ $request = new \Zeevin\Libaip\Order\RequestAttribute\DepositApplyRequest();
 $request->setBizUserId('185e0584-14cd-11ea-b876-02424f051571')->setAmount(1)
     ->setAccountSetNo($app->config->get('account_set_no'))
     ->setFrontUrl('http://7ddv2.lo')
+    ->setOrderExpireDatetime(new DateTime('+15 minutes'))
     ->setProjectExtension([
         'project_order_id'   => 'P_'.bin2hex(random_bytes(10)),
         'project_order_type' => 1,
