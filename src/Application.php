@@ -22,6 +22,7 @@ use Zeevin\Libaip\Core\ServiceContainer;
  * @property \Zeevin\Libaip\Order\QueryBalanceClient $order_queryBalance
  * @property \Zeevin\Libaip\Order\WithdrawApplyClient $order_withdrawApply
  * @property \Zeevin\Libaip\Order\ConsumeApplyClient $order_consumeApply
+ * @property \Zeevin\Libaip\User\ApplyBindAcctClient $user_applyBindAcct
  *
  * @package Zeevin\Libaip
  */

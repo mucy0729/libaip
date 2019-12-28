@@ -23,5 +23,8 @@ class ServiceProvider implements ServiceProviderInterface
         $app['user_createMember'] = function ($app) {
             return new CreateMemberClient($app);
         };
+        $app['user_applyBindAcct'] = function ($app) {
+            return new ApplyBindAcctClient($app);
+        };
     }
 }
