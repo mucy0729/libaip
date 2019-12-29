@@ -91,6 +91,14 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     protected $project_extension;
 
     /**
+     *
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("front_url")
+     * @JMS\Type("string")
+     */
+    protected $front_url;
+
+    /**
      * @return mixed
      */
     public function getPayerId()
@@ -300,4 +308,23 @@ class ConsumeApplyRequest extends BaseRequestAttribute
         return $this->project_extension;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getFrontUrl()
+    {
+        return $this->front_url;
+    }
+
+    /**
+     * @param  mixed  $front_url
+     *
+     * @return ConsumeApplyRequest
+     */
+    public function setFrontUrl($front_url)
+    {
+        $this->front_url = $front_url;
+
+        return $this;
+    }
 }

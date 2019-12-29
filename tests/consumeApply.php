@@ -17,11 +17,14 @@ $request->setPayerId($app->config->get('test_data')['company']['biz_user_id'])
     ->setAmount(1)
     ->setFee(0)
     ->setValidateType(0)
+    ->setFrontUrl('http://baidu.com')
     ->setPayMethod(
-        [['T24'=>[
-        'account_set_no' => $app->config->get('account_set_no'),
-        'amount' => $request->getAmount()
-    ]]])
+        [
+            'T0' => [
+                'amount'  => $request->getAmount(),
+                'paytype' => "B2C,B2B",
+            ],
+        ])
     ->setOrderExpireDatetime(new DateTime('+15 minutes'))
     ->getProjectExtension()
     ->setProjectOrderType(103)
@@ -29,7 +32,7 @@ $request->setPayerId($app->config->get('test_data')['company']['biz_user_id'])
 
 //echo $request;exit;
 
-$ret = $app->order_consumeApply->request($request)->getResult('json');
+$ret = $app->order_consumeApply->request($request)->getResult();
 
 
-echo $ret;
+var_dump($ret);
