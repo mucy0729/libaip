@@ -168,19 +168,19 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getOrderExpireDatetime(): string
+    public function getOrderExpireDatetime()
     {
         return $this->order_expire_datetime;
     }
 
     /**
-     * @param  string  $order_expire_datetime
+     * @param  mixed  $order_expire_datetime
      *
      * @return $this
      */
-    public function setOrderExpireDatetime(string $order_expire_datetime)
+    public function setOrderExpireDatetime($order_expire_datetime)
     {
         $this->order_expire_datetime = $order_expire_datetime;
 
