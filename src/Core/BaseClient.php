@@ -136,11 +136,18 @@ abstract class BaseClient
         AES::setKey($data['lock']);
         $content = AES::decrypt($data['content']);
         unset($data['content']);
-
+        $content = $this->is_indexed_array($content)?['content'=>$content]:$content;
         return json_encode(array_merge($data, $content));
     }
 
-    public function getResult($format = 'object')
+    /**
+     * @param  string  $format
+     * @param  null  $extendNameSpace 支持外部命名空间扩展
+     *
+     * @return false|mixed|string
+     * @throws LibAipException
+     */
+    public function getResult($format = 'object',$extendNameSpace = null)
     {
         if (empty($this->httpErrors)) {
             $body_array = json_decode((string)$this->response->getBody(), true);
@@ -149,7 +156,9 @@ abstract class BaseClient
         } else {
             $body_array = $this->httpErrors;
         }
+
         $body = $this->decrypt($body_array);
+
         if ($format == 'json' ) {
             $this->result = $body;
         } elseif ($format == 'array') {
@@ -158,8 +167,10 @@ abstract class BaseClient
             if ($body_array['status'] != 200)
                 $object = 'Zeevin\Core\BaseResponseAttribute';
             else
-                $object = 'Zeevin\Libaip\\'.ucfirst($this->getDomain()).'\ResponseAttribute\\'.ucfirst($this->getId()).'Response';
-
+            {
+                $namespace = $extendNameSpace??'Zeevin\Libaip\\';
+                $object = $namespace.ucfirst($this->getDomain()).'\ResponseAttribute\\'.ucfirst($this->getId()).'Response';
+            }
             $this->result = $this->deserialize($body, $object, 'json');
         }
 
@@ -195,6 +206,13 @@ abstract class BaseClient
         return $serializer->deserialize($data, $object, $format);
     }
 
+    protected function is_indexed_array($arr)
+    {
+        if (is_array($arr)) {
+            return count(array_filter(array_keys($arr), 'is_string')) === 0;
+        }
+        return false;
+    }
     /**
      * @return string
      */
