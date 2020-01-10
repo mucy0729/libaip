@@ -35,5 +35,8 @@ class ServiceProvider implements ServiceProviderInterface
         $app['order_consumeApply'] = function ($app) {
             return new ConsumeApplyClient($app);
         };
+        $app['order_agentCollectApply'] = function ($app) {
+            return new AgentCollectApplyClient($app);
+        };
     }
 }

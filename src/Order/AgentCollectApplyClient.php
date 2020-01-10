@@ -1,9 +1,9 @@
 <?php
 /**
  * @author Cao Kang(caokang@outlook.com)
- * Date: 2019/12/20
- * Time: 11:26
- * Source: WithdrawApplyClient.php
+ * Date: 2020/1/9
+ * Time: 18:50
+ * Source: AgentCollectApplyClient.php
  * Project: libaip
  */
 
@@ -14,13 +14,12 @@ use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\Order\ResponseAttribute\WithdrawApplyResponse;
 
 /**
- * Class WithdrawApplyClient
- * @method WithdrawApplyResponse getResult($format = 'object', $extendNameSpace = null)
- *
+ * Class AgentCollectApplyClient
+ * @method  WithdrawApplyResponse getResult($format = 'object', $extendNameSpace = null)
  * @package Zeevin\Libaip\Order
  */
-class WithdrawApplyClient extends BaseClient
+class AgentCollectApplyClient extends BaseClient
 {
     protected $domain = 'Order';
-    protected $id = 'withdrawApply';
+    protected $id = 'agentCollectApply';
 }

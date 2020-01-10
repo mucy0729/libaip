@@ -24,7 +24,7 @@ use Zeevin\Libaip\Core\ServiceContainer;
  * @property \Zeevin\Libaip\Order\ConsumeApplyClient $order_consumeApply
  * @property \Zeevin\Libaip\User\ApplyBindAcctClient $user_applyBindAcct
  * @property \Zeevin\Libaip\Tool\CheckSignClient $tool_checkSign
- *
+ * @property \Zeevin\Libaip\Order\AgentCollectApplyClient $order_agentCollectApply
  * @package Zeevin\Libaip
  */
 class Application extends ServiceContainer

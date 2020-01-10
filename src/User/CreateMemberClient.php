@@ -16,7 +16,7 @@ use Zeevin\Libaip\User\ResponseAttribute\CreateMemberResponse;
 /**
  * Class CreateMemberClient
  *
- * @method CreateMemberResponse|mixed getResult($format = 'object')
+ * @method CreateMemberResponse|mixed getResult($format = 'object', $extendNameSpace = null)
  * @package Zeevin\Libaip\User
  */
 class CreateMemberClient extends BaseClient

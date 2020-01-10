@@ -15,7 +15,7 @@ use Zeevin\Libaip\Order\ResponseAttribute\ConsumeApplyResponse;
 
 /**
  * Class ConsumeApplyClient
- * @method ConsumeApplyResponse getResult($format = 'object')
+ * @method ConsumeApplyResponse getResult($format = 'object', $extendNameSpace = null)
  *
  * @package Zeevin\Libaip\Order
  */

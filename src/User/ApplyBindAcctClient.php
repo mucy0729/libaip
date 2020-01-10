@@ -16,7 +16,7 @@ use Zeevin\Libaip\User\ResponseAttribute\ApplyBindAcctResponse;
 /**
  * Class ApplyBindAcctClient
  *
- * @method ApplyBindAcctResponse getResult($format = 'object')
+ * @method ApplyBindAcctResponse getResult($format = 'object', $extendNameSpace = null)
  * @package Zeevin\Libaip\User
  */
 class ApplyBindAcctClient extends BaseClient

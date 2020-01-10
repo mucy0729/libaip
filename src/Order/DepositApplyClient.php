@@ -16,7 +16,7 @@ use Zeevin\Libaip\Order\ResponseAttribute\DepositApplyResponse;
 /**
  * Class DepositApplyClient
  *
- * @method  DepositApplyResponse|mixed getResult($format = 'object')
+ * @method  DepositApplyResponse|mixed getResult($format = 'object', $extendNameSpace = null)
  * @package Zeevin\Libaip\Order
  */
 class DepositApplyClient extends BaseClient

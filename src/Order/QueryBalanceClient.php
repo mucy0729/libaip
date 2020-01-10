@@ -16,7 +16,7 @@ use Zeevin\Libaip\Order\ResponseAttribute\QueryBalanceResponse;
 /**
  * Class QueryBalanceClient
  *
- * @method QueryBalanceResponse getResult($format = 'object')
+ * @method QueryBalanceResponse getResult($format = 'object', $extendNameSpace = null)
  * @package Zeevin\Libaip\Order
  */
 class QueryBalanceClient extends BaseClient
