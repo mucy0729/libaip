@@ -11,11 +11,11 @@ namespace Zeevin\Libaip\Order;
 
 
 use Zeevin\Libaip\Core\BaseClient;
-use Zeevin\Libaip\Order\ResponseAttribute\WithdrawApplyResponse;
+use Zeevin\Libaip\Order\ResponseAttribute\AgentCollectApplyResponse;
 
 /**
  * Class AgentCollectApplyClient
- * @method  WithdrawApplyResponse getResult($format = 'object', $extendNameSpace = null)
+ * @method  AgentCollectApplyResponse getResult($format = 'object', $extendNameSpace = null)
  * @package Zeevin\Libaip\Order
  */
 class AgentCollectApplyClient extends BaseClient
