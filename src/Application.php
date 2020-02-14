@@ -26,6 +26,8 @@ use Zeevin\Libaip\Core\ServiceContainer;
  * @property \Zeevin\Libaip\Tool\CheckSignClient $tool_checkSign
  * @property \Zeevin\Libaip\Order\AgentCollectApplyClient $order_agentCollectApply
  * @property \Zeevin\Libaip\User\DestroyMemberClient $user_destroyMember
+ * @property \Zeevin\Libaip\Order\SingleAgentPayClient $order_singleAgentPay
+ * @property \Zeevin\Libaip\Order\ConsumeProtocolApplyClient $order_consumeProtocolApply
  * @package Zeevin\Libaip
  */
 class Application extends ServiceContainer

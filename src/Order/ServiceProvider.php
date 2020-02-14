@@ -41,5 +41,8 @@ class ServiceProvider implements ServiceProviderInterface
         $app['order_singleAgentPay'] = function ($app) {
             return new SingleAgentPayClient($app);
         };
+        $app['order_consumeProtocolApply'] = function ($app) {
+            return new ConsumeProtocolApplyClient($app);
+        };
     }
 }
