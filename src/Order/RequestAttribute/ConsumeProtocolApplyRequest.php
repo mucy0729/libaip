@@ -27,7 +27,7 @@ class ConsumeProtocolApplyRequest extends BaseRequestAttribute
     /**
      *
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("reciever_id")
+     * @SerializedName("receiver_id")
      * @JMS\Type("string")
      */
     protected $receiver_id = '#yunBizUserId_B2C#';
