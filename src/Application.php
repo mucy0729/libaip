@@ -28,6 +28,8 @@ use Zeevin\Libaip\Core\ServiceContainer;
  * @property \Zeevin\Libaip\User\DestroyMemberClient $user_destroyMember
  * @property \Zeevin\Libaip\Order\SingleAgentPayClient $order_singleAgentPay
  * @property \Zeevin\Libaip\Order\ConsumeProtocolApplyClient $order_consumeProtocolApply
+ * @property \Zeevin\Libaip\User\UnbindBankCardClient $user_unbindBankCard
+ *
  * @package Zeevin\Libaip
  */
 class Application extends ServiceContainer
