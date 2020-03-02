@@ -68,7 +68,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
      *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("bank_card_pro")
-     * @JMS\Type("string")
+     * @JMS\Type("integer")
      */
     protected $bank_card_pro;
     /**
