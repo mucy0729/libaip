@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\Order;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\Order\ResponseAttribute\PayFrontSmsResponse;
 
 /**
- * Class PayFrontSmsClient
+ * Class PayFrontSmsClient.
  *
  * @method PayFrontSmsResponse getResult($format = 'object', $extendNameSpace = null)
- * @package Zeevin\Libaip\Order
  */
 class PayFrontSmsClient extends BaseClient
 {

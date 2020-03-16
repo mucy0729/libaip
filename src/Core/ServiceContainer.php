@@ -9,9 +9,8 @@
 
 namespace Zeevin\Libaip\Core;
 
-
-use Pimple\Container;
 use GuzzleHttp\Client;
+use Pimple\Container;
 use Symfony\Component\HttpFoundation\Request;
 
 class ServiceContainer extends Container
@@ -24,10 +23,10 @@ class ServiceContainer extends Container
         //\GuzzleHttp\Client __construct params
         'http' => [
             'timeout' => 10,
-        ]
+        ],
     ];
 
-    public function __construct(array $config = array(),array $prepends = [])
+    public function __construct(array $config = [], array $prepends = [])
     {
         parent::__construct($prepends);
         $this->registerConfig($config)
@@ -36,9 +35,9 @@ class ServiceContainer extends Container
             ->registerHttpClient();
     }
 
-
     /**
      * @see \GuzzleHttp\Client __construct
+     *
      * @return $this
      */
     protected function registerHttpClient()
@@ -69,7 +68,7 @@ class ServiceContainer extends Container
     protected function registerProviders()
     {
         foreach ($this->providers as $provider) {
-            $this->register(new $provider);
+            $this->register(new $provider());
         }
 
         return $this;

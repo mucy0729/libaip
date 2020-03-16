@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\Order;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\Order\ResponseAttribute\DepositApplyResponse;
 
 /**
- * Class DepositApplyClient
+ * Class DepositApplyClient.
  *
  * @method  DepositApplyResponse|mixed getResult($format = 'object', $extendNameSpace = null)
- * @package Zeevin\Libaip\Order
  */
 class DepositApplyClient extends BaseClient
 {

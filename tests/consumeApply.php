@@ -6,7 +6,6 @@
  * Source: consumeApply.php
  * Project: libaip
  */
-
 require './bootstrap.php';
 $config = require './config.php';
 $app = new \Zeevin\Libaip\Application($config);
@@ -22,9 +21,10 @@ $request->setPayerId($app->config->get('test_data')['company']['biz_user_id'])
         [
             'T0' => [
                 'amount'  => $request->getAmount(),
-                'paytype' => "B2C,B2B",
+                'paytype' => 'B2C,B2B',
             ],
-        ])
+        ]
+    )
     ->setOrderExpireDatetime(new DateTime('+15 minutes'))
     ->getProjectExtension()
     ->setProjectOrderType(103)
@@ -33,6 +33,5 @@ $request->setPayerId($app->config->get('test_data')['company']['biz_user_id'])
 //echo $request;exit;
 
 $ret = $app->order_consumeApply->request($request)->getResult();
-
 
 var_dump($ret);

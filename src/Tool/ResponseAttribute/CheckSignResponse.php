@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Tool\ResponseAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseResponseAttribute;
@@ -17,7 +16,6 @@ use Zeevin\Libaip\Core\BaseResponseAttribute;
 class CheckSignResponse extends BaseResponseAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("result")
      * @JMS\Type("integer")
@@ -25,7 +23,7 @@ class CheckSignResponse extends BaseResponseAttribute
     protected $result;
 
     /**
-     * @return integer
+     * @return int
      */
     public function getResult()
     {

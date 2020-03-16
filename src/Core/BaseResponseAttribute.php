@@ -15,7 +15,8 @@ use JMS\Serializer\Annotation\SerializedName;
 class BaseResponseAttribute
 {
     /**
-     * 响应头信息statusCode
+     * 响应头信息statusCode.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("statusCode")
      * @JMS\Type("integer")
@@ -23,7 +24,8 @@ class BaseResponseAttribute
     protected $statusCode;
 
     /**
-     * 响应头信息reasonPhrase
+     * 响应头信息reasonPhrase.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("reasonPhrase")
      * @JMS\Type("string")
@@ -62,7 +64,7 @@ class BaseResponseAttribute
     /**
      * @return string
      */
-    public function getStatus() :string
+    public function getStatus(): string
     {
         return $this->status;
     }
@@ -70,7 +72,7 @@ class BaseResponseAttribute
     /**
      * @return string
      */
-    public function getMsg() :string
+    public function getMsg(): string
     {
         return $this->msg;
     }
@@ -86,6 +88,5 @@ class BaseResponseAttribute
         } else {
             return $serializer->serialize($this, $format);
         }
-
     }
 }

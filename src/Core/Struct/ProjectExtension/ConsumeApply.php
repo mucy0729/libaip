@@ -9,21 +9,18 @@
 
 namespace Zeevin\Libaip\Core\Struct\ProjectExtension;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 
 class ConsumeApply
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("project_order_id")
      * @JMS\Type("string")
      */
     protected $project_order_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("project_order_type")
      * @JMS\Type("integer")
@@ -39,7 +36,7 @@ class ConsumeApply
     }
 
     /**
-     * @param  mixed  $project_order_id
+     * @param mixed $project_order_id
      *
      * @return ConsumeApply
      */
@@ -59,7 +56,7 @@ class ConsumeApply
     }
 
     /**
-     * @param  mixed  $project_order_type
+     * @param mixed $project_order_type
      *
      * @return ConsumeApply
      */
@@ -69,5 +66,4 @@ class ConsumeApply
 
         return $this;
     }
-
 }

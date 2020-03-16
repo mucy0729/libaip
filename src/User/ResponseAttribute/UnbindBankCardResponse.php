@@ -9,21 +9,18 @@
 
 namespace Zeevin\Libaip\User\ResponseAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use Zeevin\Libaip\Core\BaseResponseAttribute;
 
 class UnbindBankCardResponse extends BaseResponseAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $biz_user_id;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
@@ -44,5 +41,4 @@ class UnbindBankCardResponse extends BaseResponseAttribute
     {
         return $this->card_no;
     }
-
 }

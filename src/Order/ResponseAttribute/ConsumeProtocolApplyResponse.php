@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Order\ResponseAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseResponseAttribute;
@@ -17,42 +16,36 @@ use Zeevin\Libaip\Core\BaseResponseAttribute;
 class ConsumeProtocolApplyResponse extends BaseResponseAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("order_no")
      * @JMS\Type("string")
      */
     protected $order_no;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("extend_info")
      * @JMS\Type("string")
      */
     protected $extend_info;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pay_status")
      * @JMS\Type("string")
      */
     protected $pay_status;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_user_id")
      * @JMS\Type("string")
      */
     protected $biz_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_order_no")
      * @JMS\Type("string")
      */
     protected $biz_order_no;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pay_fail_message")
      * @JMS\Type("string")
@@ -106,5 +99,4 @@ class ConsumeProtocolApplyResponse extends BaseResponseAttribute
     {
         return $this->pay_fail_message;
     }
-
 }

@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\Order;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\Order\ResponseAttribute\ConsumeProtocolApplyResponse;
 
 /**
- * Class ConsumeProtocolApplyClient
- * @method ConsumeProtocolApplyResponse getResult($format = 'object', $extendNameSpace = null)
+ * Class ConsumeProtocolApplyClient.
  *
- * @package Zeevin\Libaip\Order
+ * @method ConsumeProtocolApplyResponse getResult($format = 'object', $extendNameSpace = null)
  */
 class ConsumeProtocolApplyClient extends BaseClient
 {

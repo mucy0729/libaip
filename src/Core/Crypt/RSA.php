@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Core\Crypt;
 
-
 use Zeevin\Libaip\Handler\LibAipException;
 
 class RSA
@@ -25,7 +24,7 @@ class RSA
     }
 
     /**
-     * @param  string  $public_key_path
+     * @param string $public_key_path
      */
     public static function setPublicKey(string $public_key_path): void
     {
@@ -35,8 +34,9 @@ class RSA
     /**
      * @param $plaintext
      *
-     * @return bool|string
      * @throws LibAipException
+     *
+     * @return bool|string
      */
     public static function encrypt($plaintext)
     {
@@ -57,8 +57,9 @@ class RSA
     /**
      * @param $ciphertext
      *
-     * @return bool|string
      * @throws LibAipException
+     *
+     * @return bool|string
      */
     public static function decrypt($ciphertext)
     {

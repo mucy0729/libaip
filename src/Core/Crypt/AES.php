@@ -9,30 +9,29 @@
 
 namespace Zeevin\Libaip\Core\Crypt;
 
-
 use Zeevin\Libaip\Handler\LibAipException;
 
 class AES
 {
     protected static $key;
     protected static $iv;
-    protected static $method = "AES-128-CBC";
+    protected static $method = 'AES-128-CBC';
     protected static $option = OPENSSL_RAW_DATA;
 
-
     /**
-     * @param  array  $plaintext
+     * @param array $plaintext
+     *
+     * @throws LibAipException
      *
      * @return array
-     * @throws LibAipException
      */
     public static function encrypt(array $plaintext)
     {
         try {
             if (empty($plaintext)) {
                 $plaintext = [
-                    'list' => (object)[],
-                    'data' => (object)[],
+                    'list' => (object) [],
+                    'data' => (object) [],
                 ];
             }
             $key = bin2hex(random_bytes(16));
@@ -42,11 +41,10 @@ class AES
         } catch (\Throwable $e) {
             throw new LibAipException($e->getMessage());
         }
-
     }
 
     /**
-     * @param  string  $ciphertext
+     * @param string $ciphertext
      *
      * @return mixed|null
      */
@@ -69,7 +67,7 @@ class AES
     }
 
     /**
-     * @param  mixed  $key
+     * @param mixed $key
      */
     public static function setKey(string $key): void
     {
@@ -85,7 +83,7 @@ class AES
     }
 
     /**
-     * @param  string  $iv
+     * @param string $iv
      */
     public static function setIv(string $iv)
     {
@@ -101,7 +99,7 @@ class AES
     }
 
     /**
-     * @param  string  $method
+     * @param string $method
      *
      * @throws LibAipException
      */
@@ -123,7 +121,7 @@ class AES
     }
 
     /**
-     * @param  int  $option
+     * @param int $option
      */
     public static function setOption(int $option): void
     {

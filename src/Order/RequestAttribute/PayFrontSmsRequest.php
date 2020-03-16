@@ -9,16 +9,14 @@
 
 namespace Zeevin\Libaip\Order\RequestAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
-use Zeevin\Libaip\Core\BaseRequestAttribute;
 use Symfony\Component\HttpFoundation\Request;
+use Zeevin\Libaip\Core\BaseRequestAttribute;
 
 class PayFrontSmsRequest extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_user_id")
      * @JMS\Type("string")
@@ -26,7 +24,6 @@ class PayFrontSmsRequest extends BaseRequestAttribute
     protected $biz_user_id;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_order_no")
      * @JMS\Type("string")
@@ -42,7 +39,6 @@ class PayFrontSmsRequest extends BaseRequestAttribute
     protected $verification_code;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("consumer_ip")
      * @JMS\Type("string")
@@ -65,6 +61,7 @@ class PayFrontSmsRequest extends BaseRequestAttribute
     public function setBizUserId(string $biz_user_id)
     {
         $this->biz_user_id = $biz_user_id;
+
         return $this;
     }
 
@@ -84,6 +81,7 @@ class PayFrontSmsRequest extends BaseRequestAttribute
     public function setBizOrderNo(string $biz_order_no)
     {
         $this->biz_order_no = $biz_order_no;
+
         return $this;
     }
 
@@ -103,6 +101,7 @@ class PayFrontSmsRequest extends BaseRequestAttribute
     public function setVerificationCode(string $verification_code)
     {
         $this->verification_code = $verification_code;
+
         return $this;
     }
 
@@ -121,13 +120,12 @@ class PayFrontSmsRequest extends BaseRequestAttribute
      */
     public function setConsumerIp(string $consumer_ip = '')
     {
-        if (empty($consumer_ip))
-        {
-            $request = new Request([],[],[],[],[],$_SERVER);
+        if (empty($consumer_ip)) {
+            $request = new Request([], [], [], [], [], $_SERVER);
             $consumer_ip = $request->getClientIp();
         }
         $this->consumer_ip = $consumer_ip;
+
         return $this;
     }
-
 }

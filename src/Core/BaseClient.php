@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Core;
 
-
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Zeevin\Libaip\Core\Crypt\AES;
@@ -17,10 +16,7 @@ use Zeevin\Libaip\Core\Crypt\RSA;
 use Zeevin\Libaip\Handler\LibAipException;
 
 /**
- * Class BaseClient
- *
- *
- * @package Zeevin\Libaip\Core
+ * Class BaseClient.
  */
 abstract class BaseClient
 {
@@ -42,14 +38,16 @@ abstract class BaseClient
     }
 
     /**
-     * @param  string  $body
+     * @param string $body
+     *
+     * @throws LibAipException
      *
      * @return $this
-     * @throws LibAipException
      */
     public function request(string $body = '')
     {
         $method = strtoupper($this->getMethod());
+
         try {
             $this->response = $this->getHttpClient()->request(
                 $method,
@@ -59,7 +57,6 @@ abstract class BaseClient
                     'verify'  => false,
                     'headers' => $this->getHeaders(),
                 ]
-
             );
         } catch (ClientException $e) {
             $this->httpErrors = [
@@ -67,7 +64,7 @@ abstract class BaseClient
                 'reasonPhrase' => $e->getResponse()->getReasonPhrase(),
             ];
 
-            $message = (array)json_decode($e->getResponse()->getBody()->getContents(), true);
+            $message = (array) json_decode($e->getResponse()->getBody()->getContents(), true);
             $this->httpErrors = array_merge($this->httpErrors, $message);
         } catch (\Throwable $e) {
             throw new LibAipException('gateway request failed');
@@ -77,10 +74,11 @@ abstract class BaseClient
     }
 
     /**
-     * @param  string  $data
+     * @param string $data
+     *
+     * @throws \Zeevin\Libaip\Handler\LibAipException
      *
      * @return false|string
-     * @throws \Zeevin\Libaip\Handler\LibAipException
      */
     protected function packRequestSkeleton(string $data)
     {
@@ -123,8 +121,9 @@ abstract class BaseClient
     /**
      * @param $data
      *
-     * @return false|string
      * @throws LibAipException
+     *
+     * @return false|string
      */
     protected function decrypt($data)
     {
@@ -136,21 +135,23 @@ abstract class BaseClient
         AES::setKey($data['lock']);
         $content = AES::decrypt($data['content']);
         unset($data['content']);
-        $content = $this->is_indexed_array($content)?['content'=>$content]:$content;
+        $content = $this->is_indexed_array($content) ? ['content'=>$content] : $content;
+
         return json_encode(array_merge($data, $content));
     }
 
     /**
-     * @param  string  $format
-     * @param  null  $extendNameSpace 支持外部命名空间扩展
+     * @param string $format
+     * @param null   $extendNameSpace 支持外部命名空间扩展
+     *
+     * @throws LibAipException
      *
      * @return false|mixed|string
-     * @throws LibAipException
      */
-    public function getResult($format = 'object',$extendNameSpace = null)
+    public function getResult($format = 'object', $extendNameSpace = null)
     {
         if (empty($this->httpErrors)) {
-            $body_array = json_decode((string)$this->response->getBody(), true);
+            $body_array = json_decode((string) $this->response->getBody(), true);
             $body_array['statusCode'] = $this->response->getStatusCode();
             $body_array['reasonPhrase'] = $this->response->getReasonPhrase();
         } else {
@@ -159,16 +160,15 @@ abstract class BaseClient
 
         $body = $this->decrypt($body_array);
 
-        if ($format == 'json' ) {
+        if ($format == 'json') {
             $this->result = $body;
         } elseif ($format == 'array') {
             $this->result = json_decode($body, true);
         } elseif ($format == 'object') {
-            if ($body_array['status'] != 200)
+            if ($body_array['status'] != 200) {
                 $object = 'Zeevin\Core\BaseResponseAttribute';
-            else
-            {
-                $namespace = $extendNameSpace??'Zeevin\Libaip\\';
+            } else {
+                $namespace = $extendNameSpace ?? 'Zeevin\Libaip\\';
                 $object = $namespace.ucfirst($this->getDomain()).'\ResponseAttribute\\'.ucfirst($this->getId()).'Response';
             }
             $this->result = $this->deserialize($body, $object, 'json');
@@ -198,8 +198,9 @@ abstract class BaseClient
 
     protected function deserialize($data, $object, $format)
     {
-        if (is_array($data))
-            $data =json_encode($data);
+        if (is_array($data)) {
+            $data = json_encode($data);
+        }
         $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
         $object = class_exists($object) ? $object : BaseResponseAttribute::class;
 
@@ -211,8 +212,10 @@ abstract class BaseClient
         if (is_array($arr)) {
             return count(array_filter(array_keys($arr), 'is_string')) === 0;
         }
+
         return false;
     }
+
     /**
      * @return string
      */
@@ -244,5 +247,4 @@ abstract class BaseClient
     {
         return $this->id;
     }
-
 }

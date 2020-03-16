@@ -9,10 +9,8 @@
 
 namespace Zeevin\Libaip\Core;
 
-
 use DusanKasan\Knapsack\Collection;
 
 class Config extends Collection
 {
-
 }

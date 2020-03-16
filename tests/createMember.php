@@ -6,7 +6,6 @@
  * Source: createMember.php
  * Project: libaip
  */
-
 require './bootstrap.php';
 $config = require './config.php';
 

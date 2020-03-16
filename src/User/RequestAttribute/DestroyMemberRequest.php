@@ -9,21 +9,19 @@
 
 namespace Zeevin\Libaip\User\RequestAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use Zeevin\Libaip\Core\BaseRequestAttribute;
 
 class DestroyMemberRequest extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $biz_user_id;
 
     /**
-     * 会员类型 2企业 3个人
+     * 会员类型 2企业 3个人.
      *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("integer")
@@ -31,7 +29,6 @@ class DestroyMemberRequest extends BaseRequestAttribute
     protected $member_type;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
@@ -46,7 +43,7 @@ class DestroyMemberRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $biz_user_id
+     * @param mixed $biz_user_id
      *
      * @return DestroyMemberRequest
      */
@@ -66,7 +63,7 @@ class DestroyMemberRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $member_type
+     * @param mixed $member_type
      *
      * @return DestroyMemberRequest
      */
@@ -86,7 +83,7 @@ class DestroyMemberRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $project_user_id
+     * @param mixed $project_user_id
      *
      * @return DestroyMemberRequest
      */

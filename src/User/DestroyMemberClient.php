@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\User;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\User\ResponseAttribute\DestroyMemberResponse;
 
 /**
- * Class DestroyMemberClient
- * @method DestroyMemberResponse getResult($format = 'object', $extendNameSpace = null)
+ * Class DestroyMemberClient.
  *
- * @package Zeevin\Libaip\User
+ * @method DestroyMemberResponse getResult($format = 'object', $extendNameSpace = null)
  */
 class DestroyMemberClient extends BaseClient
 {

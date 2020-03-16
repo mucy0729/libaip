@@ -6,7 +6,6 @@
  * Source: destroyMember.php
  * Project: libaip
  */
-
 require './bootstrap.php';
 $config = require './config.php';
 

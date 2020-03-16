@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\User;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\User\ResponseAttribute\ApplyBindAcctResponse;
 
 /**
- * Class ApplyBindAcctClient
+ * Class ApplyBindAcctClient.
  *
  * @method ApplyBindAcctResponse getResult($format = 'object', $extendNameSpace = null)
- * @package Zeevin\Libaip\User
  */
 class ApplyBindAcctClient extends BaseClient
 {

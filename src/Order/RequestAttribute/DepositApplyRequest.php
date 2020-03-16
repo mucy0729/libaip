@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Order\RequestAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseRequestAttribute;
@@ -17,28 +16,24 @@ use Zeevin\Libaip\Core\BaseRequestAttribute;
 class DepositApplyRequest extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_user_id")
      * @JMS\Type("string")
      */
     protected $biz_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("amount")
      * @JMS\Type("integer")
      */
     protected $amount;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("fee")
      * @JMS\Type("integer")
      */
     protected $fee = 0;
     /**
-     *
      * @JMS\SkipWhenEmpty
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("order_expire_datetime")
@@ -46,14 +41,12 @@ class DepositApplyRequest extends BaseRequestAttribute
      */
     protected $order_expire_datetime;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pay_method")
      * @JMS\Type("array<string,array>")
      */
     protected $pay_method;
     /**
-     *
      * @JMS\SkipWhenEmpty
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("goods_name")
@@ -61,7 +54,7 @@ class DepositApplyRequest extends BaseRequestAttribute
      */
     protected $goods_name;
     /**
-     * 来源 1.移动端 2.pc端
+     * 来源 1.移动端 2.pc端.
      *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("source")
@@ -69,7 +62,6 @@ class DepositApplyRequest extends BaseRequestAttribute
      */
     protected $source = 1;
     /**
-     *
      * @JMS\SkipWhenEmpty
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("summary")
@@ -77,7 +69,6 @@ class DepositApplyRequest extends BaseRequestAttribute
      */
     protected $summary;
     /**
-     *
      * @JMS\SkipWhenEmpty
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("extend_info")
@@ -85,7 +76,6 @@ class DepositApplyRequest extends BaseRequestAttribute
      */
     protected $extend_info;
     /**
-     *
      * @JMS\SkipWhenEmpty
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("project_extension")
@@ -93,14 +83,12 @@ class DepositApplyRequest extends BaseRequestAttribute
      */
     protected $project_extension;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("account_set_no")
      * @JMS\Type("string")
      */
     protected $account_set_no;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("front_url")
      * @JMS\Type("string")
@@ -116,7 +104,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  string  $biz_user_id
+     * @param string $biz_user_id
      *
      * @return $this
      */
@@ -136,7 +124,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  int  $amount
+     * @param int $amount
      *
      * @return $this
      */
@@ -156,7 +144,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  int  $fee
+     * @param int $fee
      *
      * @return $this
      */
@@ -176,7 +164,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $order_expire_datetime
+     * @param mixed $order_expire_datetime
      *
      * @return $this
      */
@@ -196,7 +184,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  array  $pay_method
+     * @param array $pay_method
      *
      * @return $this
      */
@@ -216,7 +204,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  string  $goods_name
+     * @param string $goods_name
      *
      * @return $this
      */
@@ -236,7 +224,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  int  $source
+     * @param int $source
      *
      * @return $this
      */
@@ -256,7 +244,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  string  $summary
+     * @param string $summary
      *
      * @return $this
      */
@@ -276,9 +264,9 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * 数组会转化成json字符串
+     * 数组会转化成json字符串.
      *
-     * @param  string|array  $extend_info
+     * @param string|array $extend_info
      *
      * @return $this
      */
@@ -298,7 +286,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  array  $project_extension
+     * @param array $project_extension
      *
      * @return $this
      */
@@ -338,7 +326,7 @@ class DepositApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  string  $front_url
+     * @param string $front_url
      *
      * @return $this
      */
@@ -348,5 +336,4 @@ class DepositApplyRequest extends BaseRequestAttribute
 
         return $this;
     }
-
 }

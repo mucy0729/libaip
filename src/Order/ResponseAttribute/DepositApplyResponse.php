@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Order\ResponseAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseResponseAttribute;
@@ -17,28 +16,24 @@ use Zeevin\Libaip\Core\BaseResponseAttribute;
 class DepositApplyResponse extends BaseResponseAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("order_no")
      * @JMS\Type("string")
      */
     protected $order_no;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("extend_info")
      * @JMS\Type("string")
      */
     protected $extend_info;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pay_info")
      * @JMS\Type("string")
      */
     protected $pay_info;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_order_no")
      * @JMS\Type("string")
@@ -46,7 +41,6 @@ class DepositApplyResponse extends BaseResponseAttribute
     protected $biz_order_no;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_user_id")
      * @JMS\Type("string")
@@ -92,5 +86,4 @@ class DepositApplyResponse extends BaseResponseAttribute
     {
         return $this->biz_user_id;
     }
-
 }

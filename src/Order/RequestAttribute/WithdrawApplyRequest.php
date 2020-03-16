@@ -9,77 +9,65 @@
 
 namespace Zeevin\Libaip\Order\RequestAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseRequestAttribute;
 use Zeevin\Libaip\Core\Struct\ProjectExtension\WithdrawApply;
 
 /**
- * Class WithdrawApplyRequest
- *
- * @package Zeevin\Libaip\Order\RequestAttribute
+ * Class WithdrawApplyRequest.
  */
 class WithdrawApplyRequest extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_user_id")
      * @JMS\Type("string")
      */
     protected $biz_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("amount")
      * @JMS\Type("integer")
      */
     protected $amount;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("fee")
      * @JMS\Type("integer")
      */
     protected $fee;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("source")
      * @JMS\Type("integer")
      */
     protected $source = 2;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("summary")
      * @JMS\Type("string")
      */
     protected $summary;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("bank_card_no")
      * @JMS\Type("string")
      */
     protected $bank_card_no;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("bank_card_pro")
      * @JMS\Type("integer")
      */
     protected $bank_card_pro;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("extend_info")
      * @JMS\Type("string")
      */
     protected $extend_info;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("validate_type")
      * @JMS\Type("integer")
@@ -103,7 +91,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $biz_user_id
+     * @param mixed $biz_user_id
      *
      * @return WithdrawApplyRequest
      */
@@ -123,7 +111,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $amount
+     * @param mixed $amount
      *
      * @return WithdrawApplyRequest
      */
@@ -143,7 +131,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $fee
+     * @param mixed $fee
      *
      * @return WithdrawApplyRequest
      */
@@ -163,7 +151,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $source
+     * @param mixed $source
      *
      * @return WithdrawApplyRequest
      */
@@ -183,7 +171,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $summary
+     * @param mixed $summary
      *
      * @return WithdrawApplyRequest
      */
@@ -203,7 +191,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $bank_card_no
+     * @param mixed $bank_card_no
      *
      * @return WithdrawApplyRequest
      */
@@ -223,7 +211,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $bank_card_pro
+     * @param mixed $bank_card_pro
      *
      * @return WithdrawApplyRequest
      */
@@ -243,7 +231,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $extend_info
+     * @param mixed $extend_info
      *
      * @return WithdrawApplyRequest
      */
@@ -263,7 +251,7 @@ class WithdrawApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $validate_type
+     * @param mixed $validate_type
      *
      * @return WithdrawApplyRequest
      */
@@ -279,8 +267,9 @@ class WithdrawApplyRequest extends BaseRequestAttribute
      */
     public function getProjectExtension(): WithdrawApply
     {
-        if (!$this->project_extension instanceof WithdrawApply)
+        if (!$this->project_extension instanceof WithdrawApply) {
             $this->project_extension = new WithdrawApply();
+        }
 
         return $this->project_extension;
     }

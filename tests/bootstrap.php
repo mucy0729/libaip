@@ -6,6 +6,5 @@
  * Source: bootstrap.php
  * Project: libaip
  */
-
 $loader = require '../vendor/autoload.php';
-\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader([$loader,'loadClass']);
+\Doctrine\Common\Annotations\AnnotationRegistry::registerLoader([$loader, 'loadClass']);

@@ -9,14 +9,13 @@
 
 namespace Zeevin\Libaip\User;
 
-
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
 class ServiceProvider implements ServiceProviderInterface
 {
     /**
-     * @param  Container  $app
+     * @param Container $app
      */
     public function register(Container $app)
     {

@@ -9,23 +9,19 @@
 
 namespace Zeevin\Libaip\Order\ResponseAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseResponseAttribute;
 
 class QueryBalanceResponse extends BaseResponseAttribute
 {
-
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("all_amount")
      * @JMS\Type("integer")
      */
     protected $all_amount;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("freezen_amount")
      * @JMS\Type("integer")
