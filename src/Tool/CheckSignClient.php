@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\Tool;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\Tool\ResponseAttribute\CheckSignResponse;
 
 /**
- * Class CheckSignClient
- * @method CheckSignResponse getResult($format = 'object')
+ * Class CheckSignClient.
  *
- * @package Zeevin\Libaip\Tool
+ * @method CheckSignResponse getResult($format = 'object')
  */
 class CheckSignClient extends BaseClient
 {

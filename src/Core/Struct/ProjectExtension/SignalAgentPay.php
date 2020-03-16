@@ -9,44 +9,36 @@
 
 namespace Zeevin\Libaip\Core\Struct\ProjectExtension;
 
-
 use JMS\Serializer\Annotation as JMS;
-use JMS\Serializer\Annotation\SerializedName;
 
 class SignalAgentPay
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $project_order_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $project_order_type;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("array<array>")
      */
     protected $arrears_list;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $inviter_biz_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $inviter_project_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
@@ -61,7 +53,7 @@ class SignalAgentPay
     }
 
     /**
-     * @param  mixed  $project_order_id
+     * @param mixed $project_order_id
      *
      * @return SignalAgentPay
      */
@@ -81,7 +73,7 @@ class SignalAgentPay
     }
 
     /**
-     * @param  mixed  $project_order_type
+     * @param mixed $project_order_type
      *
      * @return SignalAgentPay
      */
@@ -101,7 +93,7 @@ class SignalAgentPay
     }
 
     /**
-     * @param  mixed  $arrears_list
+     * @param mixed $arrears_list
      *
      * @return SignalAgentPay
      */
@@ -121,7 +113,7 @@ class SignalAgentPay
     }
 
     /**
-     * @param  mixed  $inviter_biz_user_id
+     * @param mixed $inviter_biz_user_id
      *
      * @return SignalAgentPay
      */
@@ -141,7 +133,7 @@ class SignalAgentPay
     }
 
     /**
-     * @param  mixed  $inviter_project_user_id
+     * @param mixed $inviter_project_user_id
      *
      * @return SignalAgentPay
      */
@@ -161,7 +153,7 @@ class SignalAgentPay
     }
 
     /**
-     * @param  mixed  $inviter_project_user_type
+     * @param mixed $inviter_project_user_type
      *
      * @return SignalAgentPay
      */
@@ -171,6 +163,4 @@ class SignalAgentPay
 
         return $this;
     }
-
-
 }

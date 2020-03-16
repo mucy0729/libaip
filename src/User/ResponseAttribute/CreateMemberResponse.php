@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\User\ResponseAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseResponseAttribute;
@@ -17,7 +16,7 @@ use Zeevin\Libaip\Core\BaseResponseAttribute;
 class CreateMemberResponse extends BaseResponseAttribute
 {
     /**
-     * 通联用户ID
+     * 通联用户ID.
      *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("user_id")
@@ -25,7 +24,7 @@ class CreateMemberResponse extends BaseResponseAttribute
      */
     protected $user_id;
     /**
-     * 通联用户ID
+     * 通联用户ID.
      *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_user_id")
@@ -48,5 +47,4 @@ class CreateMemberResponse extends BaseResponseAttribute
     {
         return $this->biz_user_id;
     }
-
 }

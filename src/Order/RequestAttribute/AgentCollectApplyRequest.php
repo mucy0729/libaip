@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Order\RequestAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseRequestAttribute;
@@ -24,21 +23,18 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
      */
     protected $payer_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("amount")
      * @JMS\Type("integer")
      */
     protected $amount;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("fee")
      * @JMS\Type("integer")
      */
     protected $fee = 0;
     /**
-     *
      * @JMS\SkipWhenEmpty
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("order_expire_datetime")
@@ -46,14 +42,12 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
      */
     protected $order_expire_datetime;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pay_method")
      * @JMS\Type("array<string,array>")
      */
     protected $pay_method;
     /**
-     *
      * @JMS\SkipWhenEmpty
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("goods_name")
@@ -61,7 +55,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
      */
     protected $goods_name;
     /**
-     * 来源 1.移动端 2.pc端
+     * 来源 1.移动端 2.pc端.
      *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("source")
@@ -69,7 +63,6 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
      */
     protected $source = 1;
     /**
-     *
      * @JMS\SkipWhenEmpty
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("summary")
@@ -77,7 +70,6 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
      */
     protected $summary;
     /**
-     *
      * @JMS\SkipWhenEmpty
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("extend_info")
@@ -86,7 +78,6 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     protected $extend_info;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("reciever_list")
      * @JMS\Type("array<array>")
@@ -135,7 +126,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $payer_id
+     * @param mixed $payer_id
      *
      * @return AgentCollectApplyRequest
      */
@@ -155,7 +146,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $amount
+     * @param mixed $amount
      *
      * @return AgentCollectApplyRequest
      */
@@ -175,11 +166,11 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  int  $fee
+     * @param int $fee
      *
      * @return AgentCollectApplyRequest
      */
-    public function setFee(int $fee): AgentCollectApplyRequest
+    public function setFee(int $fee): self
     {
         $this->fee = $fee;
 
@@ -195,7 +186,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $order_expire_datetime
+     * @param mixed $order_expire_datetime
      *
      * @return AgentCollectApplyRequest
      */
@@ -215,7 +206,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $pay_method
+     * @param mixed $pay_method
      *
      * @return AgentCollectApplyRequest
      */
@@ -235,7 +226,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $goods_name
+     * @param mixed $goods_name
      *
      * @return AgentCollectApplyRequest
      */
@@ -255,11 +246,11 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  int  $source
+     * @param int $source
      *
      * @return AgentCollectApplyRequest
      */
-    public function setSource(int $source): AgentCollectApplyRequest
+    public function setSource(int $source): self
     {
         $this->source = $source;
 
@@ -275,7 +266,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $summary
+     * @param mixed $summary
      *
      * @return AgentCollectApplyRequest
      */
@@ -295,7 +286,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $extend_info
+     * @param mixed $extend_info
      *
      * @return AgentCollectApplyRequest
      */
@@ -315,7 +306,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $receiver_list
+     * @param mixed $receiver_list
      *
      * @return AgentCollectApplyRequest
      */
@@ -335,7 +326,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $front_url
+     * @param mixed $front_url
      *
      * @return AgentCollectApplyRequest
      */
@@ -355,7 +346,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $goods_type
+     * @param mixed $goods_type
      *
      * @return AgentCollectApplyRequest
      */
@@ -375,7 +366,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $biz_goods_no
+     * @param mixed $biz_goods_no
      *
      * @return AgentCollectApplyRequest
      */
@@ -395,7 +386,7 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $goods_desc
+     * @param mixed $goods_desc
      *
      * @return AgentCollectApplyRequest
      */
@@ -411,13 +402,15 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
      */
     public function getProjectExtension()
     {
-        if (!$this->project_extension instanceof AgentCollectApply)
+        if (!$this->project_extension instanceof AgentCollectApply) {
             $this->project_extension = new AgentCollectApply();
+        }
+
         return $this->project_extension;
     }
 
     /**
-     * @param  mixed  $project_extension
+     * @param mixed $project_extension
      *
      * @return AgentCollectApplyRequest
      */
@@ -427,5 +420,4 @@ class AgentCollectApplyRequest extends BaseRequestAttribute
 
         return $this;
     }
-
 }

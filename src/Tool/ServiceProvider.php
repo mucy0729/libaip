@@ -9,21 +9,18 @@
 
 namespace Zeevin\Libaip\Tool;
 
-
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-
 
 class ServiceProvider implements ServiceProviderInterface
 {
     /**
-     * @param  Container  $app
+     * @param Container $app
      */
     public function register(Container $app)
     {
         $app['tool_checkSign'] = function ($app) {
             return new CheckSignClient($app);
         };
-
     }
 }

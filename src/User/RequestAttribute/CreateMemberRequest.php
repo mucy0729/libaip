@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\User\RequestAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseRequestAttribute;
@@ -18,7 +17,7 @@ use Zeevin\Libaip\Core\Struct\ProjectExtension\CreateMember;
 class CreateMemberRequest extends BaseRequestAttribute
 {
     /**
-     * 会员类型 2企业 3个人
+     * 会员类型 2企业 3个人.
      *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("member_type")
@@ -26,7 +25,7 @@ class CreateMemberRequest extends BaseRequestAttribute
      */
     protected $member_type;
     /**
-     * 来源 1.移动端 2.pc端
+     * 来源 1.移动端 2.pc端.
      *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("source")
@@ -51,13 +50,14 @@ class CreateMemberRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  int  $member_type
+     * @param int $member_type
      *
      * @return $this
      */
     public function setMemberType(int $member_type)
     {
         $this->member_type = $member_type;
+
         return $this;
     }
 
@@ -86,8 +86,9 @@ class CreateMemberRequest extends BaseRequestAttribute
      */
     public function getProjectExtension(): CreateMember
     {
-        if (!$this->project_extension instanceof CreateMember)
+        if (!$this->project_extension instanceof CreateMember) {
             $this->project_extension = new CreateMember();
+        }
 
         return $this->project_extension;
     }

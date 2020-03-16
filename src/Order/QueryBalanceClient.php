@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\Order;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\Order\ResponseAttribute\QueryBalanceResponse;
 
 /**
- * Class QueryBalanceClient
+ * Class QueryBalanceClient.
  *
  * @method QueryBalanceResponse getResult($format = 'object', $extendNameSpace = null)
- * @package Zeevin\Libaip\Order
  */
 class QueryBalanceClient extends BaseClient
 {

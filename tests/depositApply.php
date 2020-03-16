@@ -6,7 +6,6 @@
  * Source: depositApply.php
  * Project: libaip
  */
-
 require './bootstrap.php';
 $config = require './config.php';
 $app = new \Zeevin\Libaip\Application($config);
@@ -24,7 +23,7 @@ $request->setBizUserId('185e0584-14cd-11ea-b876-02424f051571')->setAmount(1)
     ->setPayMethod([
         'T0' => [
             'amount'  => $request->getAmount(),
-            'paytype' => "B2C,B2B",
+            'paytype' => 'B2C,B2B',
         ],
     ]);
 $client = $app->order_depositApply;

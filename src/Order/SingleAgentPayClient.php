@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\Order;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\Order\ResponseAttribute\SignalAgentPayResponse;
 
 /**
- * Class singleAgentPayClient
- * @method SignalAgentPayResponse getResult($format = 'object', $extendNameSpace = null)
+ * Class singleAgentPayClient.
  *
- * @package Zeevin\Libaip\Order
+ * @method SignalAgentPayResponse getResult($format = 'object', $extendNameSpace = null)
  */
 class SingleAgentPayClient extends BaseClient
 {

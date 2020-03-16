@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\User\RequestAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseRequestAttribute;
@@ -17,21 +16,18 @@ use Zeevin\Libaip\Core\BaseRequestAttribute;
 class ApplyBindAcctRequest extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_user_id")
      * @JMS\Type("string")
      */
     protected $biz_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("acct_type")
      * @JMS\Type("string")
      */
     protected $acct_type = 'AT02';
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("acct")
      * @JMS\Type("string")
@@ -47,7 +43,7 @@ class ApplyBindAcctRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $biz_user_id
+     * @param mixed $biz_user_id
      *
      * @return ApplyBindAcctRequest
      */
@@ -67,7 +63,7 @@ class ApplyBindAcctRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $acct_type
+     * @param mixed $acct_type
      *
      * @return ApplyBindAcctRequest
      */
@@ -87,7 +83,7 @@ class ApplyBindAcctRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $acct
+     * @param mixed $acct
      *
      * @return ApplyBindAcctRequest
      */
@@ -97,5 +93,4 @@ class ApplyBindAcctRequest extends BaseRequestAttribute
 
         return $this;
     }
-
 }

@@ -6,7 +6,6 @@
  * Source: checkSign.php
  * Project: libaip
  */
-
 require './bootstrap.php';
 $config = require './config.php';
 

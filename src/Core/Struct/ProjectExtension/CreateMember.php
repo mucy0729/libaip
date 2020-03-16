@@ -15,7 +15,7 @@ use JMS\Serializer\Annotation\SerializedName;
 class CreateMember
 {
     /**
-     * 项目用户ID
+     * 项目用户ID.
      *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("project_user_id")
@@ -32,13 +32,14 @@ class CreateMember
     }
 
     /**
-     * @param  string  $project_user_id
+     * @param string $project_user_id
      *
      * @return $this
      */
     public function setProjectUserId(string $project_user_id)
     {
         $this->project_user_id = $project_user_id;
+
         return $this;
     }
 }

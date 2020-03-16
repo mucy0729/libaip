@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Tool\RequestAttributes;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseRequestAttribute;
@@ -17,7 +16,6 @@ use Zeevin\Libaip\Core\BaseRequestAttribute;
 class CheckSignRequest extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("sign")
      * @JMS\Type("string")
@@ -25,7 +23,6 @@ class CheckSignRequest extends BaseRequestAttribute
     protected $sign;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("timestamp")
      * @JMS\Type("string")
@@ -33,7 +30,6 @@ class CheckSignRequest extends BaseRequestAttribute
     protected $timestamp;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("rps")
      * @JMS\Type("string")
@@ -41,7 +37,6 @@ class CheckSignRequest extends BaseRequestAttribute
     protected $rps;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("sysid")
      * @JMS\Type("string")
@@ -57,7 +52,7 @@ class CheckSignRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $sign
+     * @param mixed $sign
      *
      * @return CheckSignRequest
      */
@@ -77,7 +72,7 @@ class CheckSignRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $timestamp
+     * @param mixed $timestamp
      *
      * @return CheckSignRequest
      */
@@ -97,7 +92,7 @@ class CheckSignRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $rps
+     * @param mixed $rps
      *
      * @return CheckSignRequest
      */
@@ -117,7 +112,7 @@ class CheckSignRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $sysid
+     * @param mixed $sysid
      *
      * @return CheckSignRequest
      */

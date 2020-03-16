@@ -6,11 +6,8 @@
  * Source: queryBalance.php
  * Project: libaip
  */
-
 require './bootstrap.php';
 $config = require './config.php';
-
-
 
 $app = new \Zeevin\Libaip\Application($config);
 

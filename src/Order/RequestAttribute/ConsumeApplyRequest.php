@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Order\RequestAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseRequestAttribute;
@@ -18,66 +17,56 @@ use Zeevin\Libaip\Core\Struct\ProjectExtension\ConsumeApply;
 class ConsumeApplyRequest extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("payer_id")
      * @JMS\Type("string")
      */
     protected $payer_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("reciever_id")
      * @JMS\Type("string")
      */
     protected $receiver_id = '#yunBizUserId_B2C#';
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("integer")
      */
     protected $amount;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("integer")
      */
     protected $fee;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pay_method")
      * @JMS\Type("array")
      */
     protected $pay_method;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("integer")
      */
     protected $source = 2;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $summary;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("extend_info")
      * @JMS\Type("string")
      */
     protected $extend_info;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("validate_type")
      * @JMS\Type("integer")
      */
     protected $validate_type;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("order_expire_datetime")
      * @JMS\Type("DateTime<'Y-m-d H:i:s'>")
@@ -91,7 +80,6 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     protected $project_extension;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("front_url")
      * @JMS\Type("string")
@@ -107,7 +95,7 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $payer_id
+     * @param mixed $payer_id
      *
      * @return ConsumeApplyRequest
      */
@@ -127,11 +115,11 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  string  $receiver_id
+     * @param string $receiver_id
      *
      * @return ConsumeApplyRequest
      */
-    public function setReceiverId(string $receiver_id): ConsumeApplyRequest
+    public function setReceiverId(string $receiver_id): self
     {
         $this->receiver_id = $receiver_id;
 
@@ -147,7 +135,7 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $amount
+     * @param mixed $amount
      *
      * @return ConsumeApplyRequest
      */
@@ -167,7 +155,7 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $fee
+     * @param mixed $fee
      *
      * @return ConsumeApplyRequest
      */
@@ -187,7 +175,7 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $pay_method
+     * @param mixed $pay_method
      *
      * @return ConsumeApplyRequest
      */
@@ -207,11 +195,11 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  int  $source
+     * @param int $source
      *
      * @return ConsumeApplyRequest
      */
-    public function setSource(int $source): ConsumeApplyRequest
+    public function setSource(int $source): self
     {
         $this->source = $source;
 
@@ -227,7 +215,7 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $summary
+     * @param mixed $summary
      *
      * @return ConsumeApplyRequest
      */
@@ -247,7 +235,7 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $extend_info
+     * @param mixed $extend_info
      *
      * @return ConsumeApplyRequest
      */
@@ -267,7 +255,7 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $validate_type
+     * @param mixed $validate_type
      *
      * @return ConsumeApplyRequest
      */
@@ -287,7 +275,7 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $order_expire_datetime
+     * @param mixed $order_expire_datetime
      *
      * @return ConsumeApplyRequest
      */
@@ -303,8 +291,10 @@ class ConsumeApplyRequest extends BaseRequestAttribute
      */
     public function getProjectExtension(): ConsumeApply
     {
-        if (!$this->project_extension instanceof ConsumeApply)
+        if (!$this->project_extension instanceof ConsumeApply) {
             $this->project_extension = new ConsumeApply();
+        }
+
         return $this->project_extension;
     }
 
@@ -317,7 +307,7 @@ class ConsumeApplyRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $front_url
+     * @param mixed $front_url
      *
      * @return ConsumeApplyRequest
      */

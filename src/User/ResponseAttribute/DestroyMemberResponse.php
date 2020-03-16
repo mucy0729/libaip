@@ -9,10 +9,8 @@
 
 namespace Zeevin\Libaip\User\ResponseAttribute;
 
-
 use Zeevin\Libaip\Core\BaseResponseAttribute;
 
 class DestroyMemberResponse extends BaseResponseAttribute
 {
-
 }

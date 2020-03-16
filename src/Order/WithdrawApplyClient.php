@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\Order;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\Order\ResponseAttribute\WithdrawApplyResponse;
 
 /**
- * Class WithdrawApplyClient
- * @method WithdrawApplyResponse getResult($format = 'object', $extendNameSpace = null)
+ * Class WithdrawApplyClient.
  *
- * @package Zeevin\Libaip\Order
+ * @method WithdrawApplyResponse getResult($format = 'object', $extendNameSpace = null)
  */
 class WithdrawApplyClient extends BaseClient
 {

@@ -9,49 +9,41 @@
 
 namespace Zeevin\Libaip\Core\Struct\ProjectExtension;
 
-
 use JMS\Serializer\Annotation as JMS;
 
 class AgentCollectApply
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $project_order_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $project_order_type;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("array<array>")
      */
     protected $receiver_list;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $inviter_biz_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $inviter_project_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $inviter_project_user_type;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("array<array>")
      */
@@ -66,7 +58,7 @@ class AgentCollectApply
     }
 
     /**
-     * @param  mixed  $project_order_id
+     * @param mixed $project_order_id
      *
      * @return AgentCollectApply
      */
@@ -86,7 +78,7 @@ class AgentCollectApply
     }
 
     /**
-     * @param  mixed  $project_order_type
+     * @param mixed $project_order_type
      *
      * @return AgentCollectApply
      */
@@ -106,7 +98,7 @@ class AgentCollectApply
     }
 
     /**
-     * @param  mixed  $receiver_list
+     * @param mixed $receiver_list
      *
      * @return AgentCollectApply
      */
@@ -126,7 +118,7 @@ class AgentCollectApply
     }
 
     /**
-     * @param  mixed  $inviter_biz_user_id
+     * @param mixed $inviter_biz_user_id
      *
      * @return AgentCollectApply
      */
@@ -146,7 +138,7 @@ class AgentCollectApply
     }
 
     /**
-     * @param  mixed  $inviter_project_user_id
+     * @param mixed $inviter_project_user_id
      *
      * @return AgentCollectApply
      */
@@ -166,7 +158,7 @@ class AgentCollectApply
     }
 
     /**
-     * @param  mixed  $inviter_project_user_type
+     * @param mixed $inviter_project_user_type
      *
      * @return AgentCollectApply
      */
@@ -186,7 +178,7 @@ class AgentCollectApply
     }
 
     /**
-     * @param  mixed  $arrears_list
+     * @param mixed $arrears_list
      *
      * @return AgentCollectApply
      */
@@ -196,5 +188,4 @@ class AgentCollectApply
 
         return $this;
     }
-
 }

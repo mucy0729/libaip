@@ -9,8 +9,6 @@
 
 namespace Zeevin\Libaip\Handler;
 
-
 class LibAipException extends \Exception
 {
-
 }

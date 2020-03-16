@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Order\RequestAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseRequestAttribute;
@@ -18,20 +17,17 @@ use Zeevin\Libaip\Core\Struct\ProjectExtension\SignalAgentPay;
 class SignalAgentPayRequest extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_user_id")
      * @JMS\Type("string")
      */
     protected $biz_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("integer")
      */
     protected $amount;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("integer")
      */
@@ -43,25 +39,21 @@ class SignalAgentPayRequest extends BaseRequestAttribute
      */
     protected $collect_pay_list;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $goods_type;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $biz_goods_no;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $summary;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
@@ -73,7 +65,6 @@ class SignalAgentPayRequest extends BaseRequestAttribute
      */
     protected $project_extension;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("array<array>")
      */
@@ -88,7 +79,7 @@ class SignalAgentPayRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $biz_user_id
+     * @param mixed $biz_user_id
      *
      * @return SignalAgentPayRequest
      */
@@ -108,7 +99,7 @@ class SignalAgentPayRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $amount
+     * @param mixed $amount
      *
      * @return SignalAgentPayRequest
      */
@@ -128,7 +119,7 @@ class SignalAgentPayRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $fee
+     * @param mixed $fee
      *
      * @return SignalAgentPayRequest
      */
@@ -148,7 +139,7 @@ class SignalAgentPayRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $collect_pay_list
+     * @param mixed $collect_pay_list
      *
      * @return SignalAgentPayRequest
      */
@@ -168,7 +159,7 @@ class SignalAgentPayRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $goods_type
+     * @param mixed $goods_type
      *
      * @return SignalAgentPayRequest
      */
@@ -188,7 +179,7 @@ class SignalAgentPayRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $biz_goods_no
+     * @param mixed $biz_goods_no
      *
      * @return SignalAgentPayRequest
      */
@@ -208,7 +199,7 @@ class SignalAgentPayRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $summary
+     * @param mixed $summary
      *
      * @return SignalAgentPayRequest
      */
@@ -228,7 +219,7 @@ class SignalAgentPayRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $extend_info
+     * @param mixed $extend_info
      *
      * @return SignalAgentPayRequest
      */
@@ -244,8 +235,9 @@ class SignalAgentPayRequest extends BaseRequestAttribute
      */
     public function getProjectExtension(): SignalAgentPay
     {
-        if (!$this->project_extension instanceof SignalAgentPay)
+        if (!$this->project_extension instanceof SignalAgentPay) {
             $this->project_extension = new SignalAgentPay();
+        }
 
         return $this->project_extension;
     }
@@ -259,7 +251,7 @@ class SignalAgentPayRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $split_rule_list
+     * @param mixed $split_rule_list
      *
      * @return SignalAgentPayRequest
      */
@@ -269,6 +261,4 @@ class SignalAgentPayRequest extends BaseRequestAttribute
 
         return $this;
     }
-
-
 }

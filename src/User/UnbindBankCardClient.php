@@ -9,15 +9,13 @@
 
 namespace Zeevin\Libaip\User;
 
-
 use Zeevin\Libaip\Core\BaseClient;
 use Zeevin\Libaip\User\ResponseAttribute\UnbindBankCardResponse;
 
 /**
- * Class UnbindBankCardClient
+ * Class UnbindBankCardClient.
  *
  * @method UnbindBankCardResponse getResult($format = 'object', $extendNameSpace = null)
- * @package Zeevin\Libaip\User
  */
 class UnbindBankCardClient extends BaseClient
 {

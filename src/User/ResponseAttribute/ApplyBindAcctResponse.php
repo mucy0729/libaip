@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\User\ResponseAttribute;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libaip\Core\BaseResponseAttribute;
@@ -17,14 +16,12 @@ use Zeevin\Libaip\Core\BaseResponseAttribute;
 class ApplyBindAcctResponse extends BaseResponseAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("biz_user_id")
      * @JMS\Type("string")
      */
     protected $biz_user_id;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("result")
      * @JMS\Type("string")
@@ -46,5 +43,4 @@ class ApplyBindAcctResponse extends BaseResponseAttribute
     {
         return $this->result;
     }
-
 }

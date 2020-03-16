@@ -9,21 +9,18 @@
 
 namespace Zeevin\Libaip\User\RequestAttribute;
 
-
-use Zeevin\Libaip\Core\BaseRequestAttribute;
 use JMS\Serializer\Annotation as JMS;
+use Zeevin\Libaip\Core\BaseRequestAttribute;
 
 class UnbindBankCardRequest extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
     protected $biz_user_id;
 
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @JMS\Type("string")
      */
@@ -38,7 +35,7 @@ class UnbindBankCardRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $biz_user_id
+     * @param mixed $biz_user_id
      *
      * @return UnbindBankCardRequest
      */
@@ -58,7 +55,7 @@ class UnbindBankCardRequest extends BaseRequestAttribute
     }
 
     /**
-     * @param  mixed  $card_no
+     * @param mixed $card_no
      *
      * @return UnbindBankCardRequest
      */

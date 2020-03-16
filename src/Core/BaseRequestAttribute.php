@@ -9,7 +9,6 @@
 
 namespace Zeevin\Libaip\Core;
 
-
 abstract class BaseRequestAttribute
 {
     public function __toString()
@@ -21,12 +20,12 @@ abstract class BaseRequestAttribute
     {
         $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
 
-        if ($format == 'form-url-encode')
-        {
-            $json = $serializer->serialize($this,'json');
-            return http_build_query(json_decode($json,true));
-        }
-        else
+        if ($format == 'form-url-encode') {
+            $json = $serializer->serialize($this, 'json');
+
+            return http_build_query(json_decode($json, true));
+        } else {
             return $serializer->serialize($this, $format);
+        }
     }
 }
